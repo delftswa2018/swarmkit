@@ -98,7 +98,7 @@ func (r *Supervisor) waitRestart(ctx context.Context, oldDelay *delayedStart, cl
 	}
 }
 
-// Restart initiates a new task to replace t if appropriate under the service's
+// Restart initiates a new task to replace it if appropriate under the service's
 // restart policy.
 func (r *Supervisor) Restart(ctx context.Context, tx store.Tx, cluster *api.Cluster, service *api.Service, t api.Task) error {
 	// TODO(aluzzardi): This function should not depend on `service`.

@@ -28,7 +28,7 @@ func loadData(swarmdir, unlockKey string) (*storage.WALData, *raftpb.Snapshot, e
 
 	_, err := os.Stat(walDir)
 	if err == nil {
-		// Encrypted WAL is present
+		// Encrypted WAL if present
 		krw, err := getKRW(swarmdir, unlockKey)
 		if err != nil {
 			return nil, nil, err
